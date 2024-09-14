@@ -1,0 +1,7 @@
+[core]
+    autostage = true
+    remote = localstorage
+['remote "myremote"']
+    url = ../temp
+['remote "localstorage"']
+    url = ../storage
