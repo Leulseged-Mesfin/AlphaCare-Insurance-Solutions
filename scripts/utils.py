@@ -20,7 +20,7 @@ def fill_null_values(df):
 def plot_numerical_columns(df):
     
     # Plotting histograms for numerical columns
-    numerical_columns = ['Cylinders', 'cubiccapacity', 'kilowatts', 'NumberOfDoors', 'CustomValueEstimate', 'CapitalOutstanding', 'SumInsured', 'CalculatedPremiumPerTerm','TotalPremium', 'TotalClaims']
+    numerical_columns = ['CalculatedPremiumPerTerm','TotalPremium', 'TotalClaims']
 
     for column in numerical_columns:
         plt.figure(figsize=(6, 4))
@@ -32,18 +32,9 @@ def plot_numerical_columns(df):
 
 
 
-
-
 def plot_category_columns(df):
     # Plotting bar charts for categorical columns
-    categorical_columns = [ 'Citizenship', 'LegalType', 'Title', 'Language',
-       'Bank', 'AccountType', 'MaritalStatus', 'Gender', 'Country', 'Province', 'MainCrestaZone', 'SubCrestaZone', 'ItemType', 
-       'VehicleType', 'make', 'Model', 'bodytype', 
-        'CustomValueEstimate', 'AlarmImmobiliser',
-       'TrackingDevice', 'NewVehicle', 'WrittenOff',
-       'Rebuilt', 'Converted', 'TermFrequency',
-       'ExcessSelected', 'CoverCategory', 'CoverType', 'CoverGroup', 'Section',
-       'Product', 'StatutoryClass', 'StatutoryRiskType']
+    categorical_columns = [ 'Citizenship', 'Title', 'AccountType', 'Gender', 'Country', 'make', 'CoverType']
 
     for column in categorical_columns:
         plt.figure(figsize=(6, 4))
@@ -55,7 +46,7 @@ def plot_category_columns(df):
 
 
 def scater_plot_for_TP_TC(df):
-    # 1. Scatter Plot: Relationship between TotalPremium and TotalClaims across PostalCodes
+    # Relationship between TotalPremium and TotalClaims across PostalCodes
     # plt.figure(figsize=(8, 6))
     plt.figure(figsize=(10, 6), dpi=80)  # Lower the DPI if needed
 
